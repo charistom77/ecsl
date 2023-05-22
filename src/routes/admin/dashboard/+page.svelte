@@ -12,7 +12,7 @@
 		<p class="text-sm font-medium leading-6 text-gray-400">Total number of votes</p>
 		<p class="mt-2 flex items-baseline gap-x-2">
 			<span class="text-4xl font-semibold tracking-tight text-white"
-				>{data.stats.totalVotes.toLocaleString('en')}</span
+				>{data?.stats?.totalVotes?.toLocaleString('en')}</span
 			>
 		</p>
 	</div>
@@ -20,7 +20,7 @@
 		<p class="text-sm font-medium leading-6 text-gray-400">Number of results counted</p>
 		<p class="mt-2 flex items-baseline gap-x-2">
 			<span class="text-4xl font-semibold tracking-tight text-white"
-				>{data.stats.resultsCounted}</span
+				>{data?.stats?.resultsCounted}</span
 			>
 		</p>
 	</div>
@@ -28,7 +28,7 @@
 		<p class="text-sm font-medium leading-6 text-gray-400">Number of districts</p>
 		<p class="mt-2 flex items-baseline gap-x-2">
 			<span class="text-4xl font-semibold tracking-tight text-white"
-				>{data.stats.totalDistricts}</span
+				>{data?.stats?.totalDistricts}</span
 			>
 		</p>
 	</div>
@@ -36,7 +36,7 @@
 		<p class="text-sm font-medium leading-6 text-gray-400">Number of political parties</p>
 		<p class="mt-2 flex items-baseline gap-x-2">
 			<span class="text-4xl font-semibold tracking-tight text-white"
-				>{data.stats.totalPoliticalParties}</span
+				>{data?.stats?.totalPoliticalParties}</span
 			>
 		</p>
 	</div>
@@ -46,7 +46,7 @@
 
 <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
 	<Bar
-		data={data.chartData}
+		data={data?.chartData}
 		options={{
 			plugins: {},
 			responsive: true,

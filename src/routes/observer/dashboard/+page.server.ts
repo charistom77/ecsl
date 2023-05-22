@@ -8,9 +8,11 @@ export const load = (async ({ locals: { supabase, getSession } }) => {
 		throw redirect(303, '/');
 	}
 
+	console.log('user', session.user.user_metadata.district_id)
+
 	const { data: results, error } = await supabase
 		.from('report')
-		.select(`*, profiles(full_name), political_parties(*), districts(*))`)
+		.select(`*, profiles(full_name), political_parties(*), districts(*)`)
 		.eq('district_id', session.user.user_metadata.district_id);
 
 		console.log(error);
